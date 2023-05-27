@@ -1,0 +1,25 @@
+<div class="form-input">
+  <label for="label">{{ label }}</label>
+  <i class="error-label" *ngIf="control.invalid && control.dirty">
+    {{ errorLabels[object.keys(control.errors ?? {})[0]] }}
+  </i>
+  <div class="form-input__input-wrapper">
+    <ng-container *ngIf="type !== 'checkbox'">
+      <input
+        [placeholder]=""
+        [type]="type"
+        [name]="label"
+        [value]="label"
+        [formControl]="control"
+      />
+    </ng-container>
+    <ng-container *ngIf="type === 'checkbox'">
+      <input
+        type="checkbox"
+        class="checkbox"
+        [name]="label"
+        [formControl]="control"
+      />
+    </ng-container>
+  </div>
+</div>

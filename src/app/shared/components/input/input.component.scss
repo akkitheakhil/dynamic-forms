@@ -1,0 +1,79 @@
+@import "variables";
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  gap: 8px;
+  label {
+    font-size: 12px;
+    font-weight: 600;
+    color: $primary-800;
+  }
+  .error-label {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 12px;
+    font-weight: 700;
+    color: red;
+    font-style: normal;
+  }
+
+  &__input-wrapper {
+    position: relative;
+
+    i {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    input {
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+      font-weight: 600;
+      font-family: $font-family;
+      text-align: start;
+      color: $primary-800;
+      caret-color: $primary-800;
+      border: 2px solid $neutral-400;
+      border-radius: 8px;
+      outline: none;
+      height: 48px;
+      padding: 4px 16px;
+      transition: border-color 300ms ease-in;
+
+      &::placeholder {
+        color: $neutral-400;
+        font-size: 14px;
+        font-family: $font-family;
+      }
+
+      &::-webkit-input-placeholder {
+        font-family: $font-family;
+      }
+
+      &:-moz-placeholder {
+        font-family: $font-family;
+      }
+
+      &:focus,
+      &:hover {
+        border-color: $primary-800;
+      }
+
+      &.ng-invalid.ng-dirty {
+        border-color: red;
+      }
+
+      &.checkbox {
+        width: 50px;
+        accent-color: $primary-800;
+      }
+    }
+  }
+}

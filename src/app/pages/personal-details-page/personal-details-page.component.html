@@ -1,0 +1,14 @@
+<section class="personal-details-container">
+  <h2 class="personal-details-container__title">Personal Details</h2>
+
+  <ng-container
+    *ngIf="personalDetailsForm$ | async as personalDetailForm; else loading"
+  >
+    <app-personal-details-form
+      data-personal-details-form
+      [dynamicForm]="personalDetailForm"
+    />
+  </ng-container>
+</section>
+
+<ng-template #loading> ...loading </ng-template>

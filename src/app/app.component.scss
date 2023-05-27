@@ -1,0 +1,17 @@
+@import "variables";
+
+.nav {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  background-color: $primary-800;
+
+  &__logo {
+    font-size: 2rem;
+    color: $white;
+  }
+}
+
+.main {
+  padding: 2rem 1rem;
+}

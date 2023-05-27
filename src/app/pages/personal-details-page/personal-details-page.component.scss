@@ -1,0 +1,9 @@
+@import 'variables';
+.personal-details-container {
+
+
+  &__title {
+    text-align: center;
+    color: $primary-800;
+  }
+}

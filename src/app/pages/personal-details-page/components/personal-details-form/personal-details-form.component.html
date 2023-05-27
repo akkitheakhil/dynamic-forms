@@ -1,0 +1,19 @@
+<form class="form" [formGroup]="dynamicFormGroup" (ngSubmit)="handleSubmit()">
+  <ng-container *ngFor="let form of dynamicForm">
+    <app-input
+      [errorLabels]="errorLabels"
+      [type]="form.type"
+      [label]="form.label"
+      [placeholder]="form.field"
+      [control]="dynamicFormGroup.controls[form.field]"
+    />
+  </ng-container>
+
+  <app-button
+    data-btn
+    appearance="primary"
+    label="Submit"
+    type="submit"
+    [disabled]="dynamicFormGroup.invalid"
+  ></app-button>
+</form>
